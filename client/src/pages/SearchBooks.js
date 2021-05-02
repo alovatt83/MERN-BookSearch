@@ -57,7 +57,7 @@ const token = Auth.loggedIn() ? Auth.getToken() : null;
     }
 
     try {
-      const data = await saveBook({
+      const { data } = await saveBook({
         variables: { bookData: { ...bookToSave } },
       });
       console.log(savedBookIds);
